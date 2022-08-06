@@ -12,6 +12,10 @@
     --secondary-font: 'Open Sans', sans-serif;
 }
 
+html, body{
+    overflow-x: hidden;
+}
+
 body{
     font-family: var(--primary-font);
 }
@@ -74,6 +78,7 @@ a:hover {
 
 .nav-link {
     font-size: 0.9375rem;
+    font-weight: 600;
     text-transform: capitalize;
     color: #333;
     letter-spacing: 1px;
@@ -190,6 +195,16 @@ a:hover {
 .contact-area {
     border: 1px solid #e6e6e6;
     border-radius: 20px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-list {
+    border-left: 1px solid #e6e6e6;
+    padding-left: 7rem;
 }
 
 .contact-area li {
@@ -216,6 +231,11 @@ a:hover {
     color: #8e6d10;
 }
 
+.faq-ans {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
 
 /* Footer */
 .footer {
@@ -240,4 +260,99 @@ a:hover {
 
 .footer-social {
     display: flex;
+}
+
+
+/* RESPONSIVE CSS */
+@media(max-width: 991px) {
+    .carousel-item{
+        height: auto !important;
+    }
+}
+
+@media(max-width: 768px) {
+    .card-md-80 {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .carousel-item {
+        height: auto !important;
+    }
+
+    .contact-area{
+        margin: 0;
+        width: 100%;
+        gap: 10px;
+    }
+    .contact-area h4{
+        font-size: 18px;
+    }
+    .contact-area .contact-list{
+        padding-left: 10px;
+    }
+
+    .footer-content a, .footer-content p {
+        padding: 0 5px;
+        font-size: 13px;
+    }
+}
+@media(max-width: 575px) {
+    .mb-sm-5{
+        margin-bottom: 20px;
+    }
+
+    .carousel-caption h1{
+        font-size: 24px;
+    }
+
+    .carousel-caption .main-btn{
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:444px) {
+    .carousel-caption h1{
+        font-size: 20px;
+    }
+
+    .carousel-caption .main-btn{
+        padding: 3px 10px;
+        font-size: 10px;
+    }
+
+    .footer-content a, .footer-content p {
+        padding: 0 5px;
+        font-size: 10px;
+    }
+
+    .footer-copy{
+        font-size: 13px;
+    }
+}
+
+@media(max-width:375px) {
+    .carousel-caption h1 {
+        font-size: 18px;
+    }
+
+    .carousel-caption .main-btn {
+        padding: 2px 8px;
+        font-size: 9px;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    .footer-social{
+        padding-top: 12px;
+        justify-content: center;
+    }
+    .footer-copy{
+        font-size: 10px;
+    }
 }

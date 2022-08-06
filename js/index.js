@@ -8,6 +8,7 @@ window.onscroll = function () {
     }
 }
 
+//active navbar
 let nav_link = nav.getElementsByClassName('nav-link');
 for (var i = 0; i < nav_link.length; i++) {
   nav_link[i].addEventListener("click", function() {
@@ -16,3 +17,12 @@ for (var i = 0; i < nav_link.length; i++) {
     this.className += " active";
   });
 }
+
+// nav hide 
+let navBar = document.querySelectorAll('.nav-link');
+let navCollapse = document.querySelector('.navbar-collapse.collapse');
+navBar.forEach(function (a) {
+    a.addEventListener("click", function () {
+        navCollapse.classList.remove("show");
+    })
+})
